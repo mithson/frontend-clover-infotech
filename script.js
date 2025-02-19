@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
         default:
             pageUrl = "dashboard.html";
             breadcrumbPage.textContent = "";
+    sidebar.classList.toggle("-translate-x-full");
+            
             break;
     }
 
@@ -91,4 +93,26 @@ document.addEventListener("click", function (event) {
     if (!dropdown.contains(event.target) && !userSection.contains(event.target)) {
         dropdown.classList.add("hidden");
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const filterDropdownButton = document.getElementById("filterDropdownButton");
+    const filterDropdownMenu = document.getElementById("filterDropdownMenu");
+
+    // Show dropdown on button hover
+    filterDropdownButton.addEventListener("mouseenter", function () {
+        filterDropdownMenu.classList.remove("hidden");
+    });
+
+    // Hide dropdown when mouse leaves both button and menu
+    function hideDropdown() {
+        setTimeout(() => {
+            if (!filterDropdownMenu.matches(":hover") && !filterDropdownButton.matches(":hover")) {
+                filterDropdownMenu.classList.add("hidden");
+            }
+        }, 200);
+    }
+
+    filterDropdownButton.addEventListener("mouseleave", hideDropdown);
+    filterDropdownMenu.addEventListener("mouseleave", hideDropdown);
 });

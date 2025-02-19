@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body class="h-screen flex">
+
+    <!-- Left Side (Image) -->
+    <div class="hidden md:flex items-center justify-center w-1/2 bg-[#2c2ab9]">
+        <img src="login.svg" alt="Login Illustration" class="w-3/4">
+    </div>
+
+    <!-- Right Side (Login Form) -->
+    <div class="flex flex-col justify-center w-full md:w-1/2 px-8 md:px-16 lg:px-24">
+        <div class="flex justify-center mb-10">
+            <img src="TalentShift.png" alt="">
+        </div>
+        <h1 style="font-weight: 600;font-size: x-large;" class="text-center font-semibold font-bold">LOGIN</h1>
+        <form action="#">
+            <!-- Email / Username Field -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-1">Email / Username</label>
+                <div class="relative">
+                    <input type="text" placeholder="Username"
+                        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <span class="absolute inset-y-0 right-3 flex items-center">
+                        <img src="email.svg" alt="Email Icon" class="w-5 h-5 opacity-50">
+                    </span>
+                </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-1">Password</label>
+                <div class="relative">
+                    <input type="password" placeholder="**********"
+                        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer">
+                        <img src="eye.svg" alt="Show Password Icon" class="w-5 h-5 opacity-50">
+                    </span>
+                </div>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex items-center justify-between mb-6">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" class="w-4 h-4 border-gray-300 rounded">
+                    <span class="text-gray-600 text-sm">Remember Me</span>
+                </label>
+                <a href="#" class="text-sm text-gray-600 hover:underline">Forgot password?</a>
+            </div>
+
+            <!-- Sign In Button -->
+            <button onclick="window.location.href='index.html';" class="w-full bg-blue-700 text-white p-3 rounded-lg hover:bg-blue-800">
+                Sign In
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>
