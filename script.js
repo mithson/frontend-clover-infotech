@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             breadcrumbPage.textContent = "View Search";
             break;
         default:
-            pageUrl = "dashboard.html";
+            pageUrl = "index.html";
             breadcrumbPage.textContent = "";
     sidebar.classList.toggle("-translate-x-full");
             
