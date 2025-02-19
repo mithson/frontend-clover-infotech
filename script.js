@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p>40%</p>
         </div>
     </div>
-    <img src="cancel.svg" alt="Cancel" class="cursor-pointer w-5 h-5">
+    <img src="cancel.svg" alt="Cancel" class="cursor-pointer w-7 h-7">
 </div>
 
 <br>
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p>80%</p>
         </div>
     </div>
-    <img src="cancel.svg" alt="Cancel" class="cursor-pointer w-5 h-5">
+    <img src="cancel.svg" alt="Cancel" class="cursor-pointer w-7 h-7">
 </div>
 
 
@@ -95,78 +95,95 @@ document.addEventListener("DOMContentLoaded", function () {
   <h2 class="text-xl font-semibold mb-4">View Search</h2>
   <div class="flex items-center w-full space-x-2">
     <input class="w-full p-4 border border-[#D9D9D9] rounded-[10px]" type="text" placeholder="Search">
-    <button class="rounded-[10px] px-6 py-4 bg-[#5856D6] text-white flex items-center">
-      <img src="search_dark_white.svg" alt="Search Icon" class="mr-2 w-5 h-5">
-      Search
+    <div class="flex justify-center">
+    <button class="rounded-[10px] px-6 py-4 bg-[#5856D6] text-white flex items-center whitespace-nowrap">
+        <img src="search_dark_white.svg" alt="Search Icon" class="mr-2 w-5 h-5">
+        <p class="pr-2">Search</p>
     </button>
-  </div>
 </div>
 
+  </div>
+  
 <br>
         <p class="text-end font-bold gray-400"> Filter By</p>
 <br>
-<table class=" min-w-full table-auto border-collapse border border-gray-300 md:max-w-[500px] md:overflow-x-scroll">
-        <thead>
-            <tr class="bg-[#D9D9D9]">
-                <th class="px-4 py-2 text-left border-b">SR.No.</th>
-                <th class="px-4 py-2 text-left border-b">Name</th>
-                <th class="px-4 py-2 text-left border-b">CV File</th>
-                <th class="px-4 py-2 text-left border-b">Updated File</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="odd:bg-white even:bg-[rgba(85, 85, 85, 1)]">
-                <td class="px-4 py-2 border-b">1</td>
-                <td class="px-4 py-2 border-b">Candidate 1</td>
-                <td class="px-4 py-2 border-b">
-                    <p class="flex items-center space-x-2"><img src="file.svg" alt="file logo"><span class="text-[#5856D6] text-nowrap underline">View File</span></p>
-                </td>
-                <td class="px-4 py-2 border-b">25-Jan-2025</td>
-            </tr>
-            <tr class="odd:bg-white even:bg-[#F2F2F2]">
-                <td class="px-4 py-2 border-b">2</td>
-                <td class="px-4 py-2 border-b">Candidate 2</td>
-                <td class="px-4 py-2 border-b">
-                    <p class="flex items-center space-x-2"><img src="file.svg" alt="file logo"><span class="text-[#5856D6] text-nowrap underline">View File</span></p>
-                </td>
-                <td class="px-4 py-2 border-b">25-Jan-2025</td>
-            </tr>
-            <tr class="odd:bg-white even:bg-[#F2F2F2]">
-                <td class="px-4 py-2 border-b">3</td>
-                <td class="px-4 py-2 border-b">Candidate 3</td>
-                <td class="px-4 py-2 border-b">
-                    <p class="flex items-center space-x-2"><img src="file.svg" alt="file logo"><span class="text-[#5856D6] text-nowrap underline">View File</span></p>
-                </td>
-                <td class="px-4 py-2 border-b">25-Jan-2025</td>
-            </tr>
-            <tr class="odd:bg-white even:bg-[#F2F2F2]">
-                <td class="px-4 py-2 border-b">4</td>
-                <td class="px-4 py-2 border-b">Candidate 4</td>
-                <td class="px-4 py-2 border-b">
-                    <p class="flex items-center space-x-2"><img src="file.svg" alt="file logo"><span class="text-[#5856D6] text-nowrap underline">View File</span></p>
-                </td>
-                <td class="px-4 py-2 border-b">25-Jan-2025</td>
-            </tr>
-            <tr class="odd:bg-white even:bg-[#F2F2F2]">
-                <td class="px-4 py-2 border-b">5</td>
-                <td class="px-4 py-2 border-b">Candidate 5</td>
-                <td class="px-4 py-2 border-b">
-                    <p class="flex items-center space-x-2"><img src="file.svg" alt="file logo"><span class="text-[#5856D6] text-nowrap underline">View File</span></p>
-                </td>
-                <td class="px-4 py-2 border-b">25-Jan-2025</td>
-            </tr>
-        </tbody>
-    </table>
-    <div className="mt-4 flex items-center justify-between text-sm text-gray-600">
-          <div>No of Records: 5</div>
-          <div className="flex items-center space-x-2">
-            <span>1</span>
-            <button className="px-2 py-1 bg-blue-600 text-white rounded">2</button>
-            <span>3</span>
-            <span>Next</span>
-          </div>
-        </div>
-      </div>
+
+<div class="md:w-full border border-gray-300 rounded-lg shadow-md">
+    <!-- Wrapper for responsiveness -->
+    <div class="bg-white">
+        <table class="md:w-full border-collapse">
+            <thead class="bg-[#D9D9D9]">
+                <tr>
+                    <th class="px-6 py-3 text-left border-b">SR.No.</th>
+                    <th class="px-6 py-3 text-left border-b">Name</th>
+                    <th class="px-6 py-3 text-left border-b">CV File</th>
+                    <th class="px-6 py-3 text-left border-b">Updated File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd:bg-white even:bg-[#F2F2F2]">
+                    <td class="px-6 py-3 border-b">1</td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">Candidate 1</td>
+                    <td class="px-6 py-3 border-b">
+                        <p class="flex items-center space-x-2">
+                            <img src="file.svg" alt="file logo">
+                            <span class="text-[#5856D6] whitespace-nowrap underline">View File</span>
+                        </p>
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">25-Jan-2025</td>
+                </tr>
+                <tr class="odd:bg-white even:bg-[#F2F2F2]">
+                    <td class="px-6 py-3 border-b">2</td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">Candidate 2</td>
+                    <td class="px-6 py-3 border-b">
+                        <p class="flex items-center space-x-2">
+                            <img src="file.svg" alt="file logo">
+                            <span class="text-[#5856D6] whitespace-nowrap underline">View File</span>
+                        </p>
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">25-Jan-2025</td>
+                </tr>
+                <tr class="odd:bg-white even:bg-[#F2F2F2]">
+                    <td class="px-6 py-3 border-b">3</td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">Candidate 3</td>
+                    <td class="px-6 py-3 border-b">
+                        <p class="flex items-center space-x-2">
+                            <img src="file.svg" alt="file logo">
+                            <span class="text-[#5856D6] whitespace-nowrap underline">View File</span>
+                        </p>
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">25-Jan-2025</td>
+                </tr>
+                <tr class="odd:bg-white even:bg-[#F2F2F2]">
+                    <td class="px-6 py-3 border-b">4</td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">Candidate 4</td>
+                    <td class="px-6 py-3 border-b">
+                        <p class="flex items-center space-x-2">
+                            <img src="file.svg" alt="file logo">
+                            <span class="text-[#5856D6] whitespace-nowrap underline">View File</span>
+                        </p>
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">25-Jan-2025</td>
+                </tr>
+                <tr class="odd:bg-white even:bg-[#F2F2F2]">
+                    <td class="px-6 py-3 border-b">5</td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">Candidate 5</td>
+                    <td class="px-6 py-3 border-b">
+                        <p class="flex items-center space-x-2">
+                            <img src="file.svg" alt="file logo">
+                            <span class="text-[#5856D6] whitespace-nowrap underline">View File</span>
+                        </p>
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-3 border-b">25-Jan-2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    
+</div>
+
     
 
             `;
@@ -180,6 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
             breadcrumbPage.textContent = "View Search";
             console.log('view search')
         } else {
+
             // Default Dashboard Page (Show Buttons)
             mainContent.innerHTML = `
                <h2 class="text-xl font-semibold mb-4">Welcome to Dashboard</h2>
@@ -225,6 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             `;
             breadcrumbPage.textContent = "";
+            sidebar.classList.toggle("-translate-x-full");
 
         }
     }
@@ -249,3 +268,17 @@ document.addEventListener("click", (event) => {
     }
 });
 
+
+function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("hidden");
+}
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+    const dropdown = document.getElementById("dropdownMenu");
+    const userSection = document.querySelector(".cursor-pointer");
+
+    if (!dropdown.contains(event.target) && !userSection.contains(event.target)) {
+        dropdown.classList.add("hidden");
+    }
+});

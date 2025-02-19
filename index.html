@@ -20,21 +20,42 @@
                 <button id="menuToggle" class="text-gray-700 md:hidden focus:outline-none">
                     ☰
                 </button>
-                <div class="text-xl font-bold text-gray-800 pl-2">Talentshift</div>
+                <!-- <div class="text-xl font-bold text-gray-800 pl-2">Talentshift</div> -->
+                <img class="pl-3" src="TalentShift.png" alt="">
             </div>
-
+            <!-- <button id="menuToggleDesktop" class="md: pl-10 text-gray-700 hidden md:block focus:outline-none">
+                ☰
+            </button> -->
             <!-- Search Bar -->
             <div class="md:ml-[180px] relative w-full max-w-xs hidden md:block">
-                <input type="text" placeholder="Search" class="border rounded-lg p-2 pr-10 w-full bg-gray-100">
+                <input type="text" placeholder="Search" class="border rounded-lg p-2 pr-10 w-full ">
                 <img class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5" src="search.svg" alt="Search">
             </div>
         </div>
 
         <!-- Right: Welcome User -->
-        <div class="flex items-center gap-3">
-            <span class="text-gray-600 text-sm font-medium">Welcome: User</span>
-            <img src="mdi_user-outline.svg" alt="User Icon" class="w-7 h-7">
+        <div class="relative">
+            <!-- Clickable User Section -->
+            <div onclick="toggleDropdown()" class="flex items-center gap-3 cursor-pointer">
+                <span class="text-gray-600 text-sm font-medium">Welcome: User</span>
+                <img src="mdi_user-outline.svg" alt="User Icon" class="w-7 h-7">
+            </div>
+
+            <!-- Dropdown Menu -->
+            <div id="dropdownMenu" class="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg p-2 hidden">
+                <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">
+                    <img src="mdi_user-outline.svg" alt="Profile" class="w-6 h-6"> Profile
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">
+                    <img src="call.svg" alt="Contact" class="w-4 h-4"> Contact
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">
+                    <img src="logout.svg" alt="Logout" class="w-5 h-5"> Logout
+                </a>
+            </div>
         </div>
+
+
     </header>
 
 
@@ -51,10 +72,11 @@
                 </button> -->
 
                 <ul>
-                    <li style="background-color: #5856D6;"
+                    <li onclick="loadPage('Dashboard')" style="background-color: #5856D6;"
                         class="p-3 flex content-center  rounded-lg hover:bg-gray-100">
                         <img style="margin-top: 3px" src="home.svg" alt="home icon ">
-                        <a href="#" class="pl-2 text-gray-800 text-white font-medium">Dashboard</a>
+                        <a
+                            class="pl-2 text-gray-800 text-white font-medium">Dashboard</a>
                     </li>
                 </ul>
             </nav>
