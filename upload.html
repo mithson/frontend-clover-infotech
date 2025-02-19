@@ -1,0 +1,57 @@
+<h2 class="text-xl font-semibold mb-4">Upload File</h2>
+<div class="w-full  bg-white p-6 shadow-md rounded-lg">
+
+<!-- Drag & Drop Upload Box -->
+<div id="drop-area" class="border-2 border-dashed border-gray-300 rounded-lg p-8 flex flex-col items-center justify-center cursor-pointer hover:border-indigo-500 transition">
+<img src="upload.svg">
+<p class="text-gray-500 mb-2">Drag and Drop or Click to Upload</p>
+<input type="file" id="fileInput" class="hidden" accept=".pdf, .png, .jpg" />
+<button id="browseFile" class="px-4 py-2 border border-gray-400 text-gray-700 rounded-lg text-sm hover:bg-gray-100">Browse File</button>
+</div>
+
+<!-- File Format Info -->
+<p class="text-gray-400 text-sm text-center mt-2">Supported formats: PDF, PNG, JPG. Max Size: 5MB</p>
+
+<!-- Display Selected File -->
+<div id="file-display" class="mt-4"></div>
+</div>
+
+
+<h2 class="text-xl mt-8 font-semibold mb-4">Uploading Files....</h2>
+
+<div class="bg-white shadow-md border border-gray-300 flex items-center justify-between p-3 rounded-lg">
+<div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+<img src="file_blue.svg" class="w-5 h-5 rounded-full">
+</div>
+<!--  -->
+<div class="flex gap-1 flex-1 flex-col px-4">
+<p>mithson_resume.docx</p>
+<progress style="height: 5px" class="w-full" value="40" max="100"></progress>
+<div class="flex justify-between text-sm text-gray-600">
+<p>2MB</p>
+<p>40%</p>
+</div>
+</div>
+<img src="cancel.svg" alt="Cancel" class="cursor-pointer w-7 h-7">
+</div>
+
+<br>
+
+<div class="bg-white shadow-md border border-gray-300 items-center flex justify-between p-3 rounded-lg">
+<div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+<img src="file_blue.svg" class="w-5 h-5 rounded-full">
+</div>
+<!--  -->
+<div class="flex gap-1 flex-1 flex-col px-4">
+<p>mithsonabhi.PDF</p>
+<progress style="height: 5px" class="w-full" value="80" max="100"></progress>
+<div class="flex justify-between text-sm text-gray-600">
+<p>16MB</p>
+<p>80%</p>
+</div>
+</div>
+<img src="cancel.svg" alt="Cancel" class="cursor-pointer w-7 h-7">
+</div>
+
+
+
