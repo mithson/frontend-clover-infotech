@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".slash").style.display = "none";
+    // document.querySelector(".slash").style.display = "none";
 
     const sidebar = document.getElementById("sidebar");
     const openSidebar = document.getElementById("openSidebar");
@@ -64,9 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.loadPage = loadPage;
 
 });
-document.addEventListener("DOMContentLoaded", function () {
-    window.loadPage = loadPage;
-}); const sidebar = document.getElementById("sidebar");
+// document.addEventListener("DOMContentLoaded", function () {
+//     // window.loadPage = loadPage;
+// }); 
+const sidebar = document.getElementById("sidebar");
 const menuToggle = document.getElementById("menuToggle");
 
 menuToggle.addEventListener("click", () => {
@@ -116,3 +117,23 @@ document.addEventListener("DOMContentLoaded", function () {
     filterDropdownButton.addEventListener("mouseleave", hideDropdown);
     filterDropdownMenu.addEventListener("mouseleave", hideDropdown);
 });
+
+function togglePassword() {
+    const passwordInput = document.getElementById("password");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+
+function handleKey(event) {
+    if (event.key === "Enter" || event.key === " ") {
+        togglePassword(); // Allow Enter or Space key to toggle password visibility
+    }
+}
+
+function redirectToDashboard() {
+    window.location.href = "index.html"; // Redirects to dashboard
+}

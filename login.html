@@ -2,13 +2,18 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=0;"/>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
 
-<body class="h-screen flex">
+
+<body class="h-screen flex overflow-hidden">
 
     <!-- Left Side (Image) -->
     <div class="hidden md:flex items-center justify-center w-1/2 bg-[#2c2ab9]">
@@ -20,7 +25,7 @@
         <div class="flex justify-center mb-10">
             <img src="TalentShift.png" alt="">
         </div>
-        <h1 style="font-weight: 600;font-size: x-large;" class="text-center font-semibold font-bold">LOGIN</h1>
+        <h1 style="font-weight: 600;font-size: x-large;" class="mb-5 text-center font-semibold font-bold">LOGIN</h1>
         <form action="#">
             <!-- Email / Username Field -->
             <div class="mb-4">
@@ -29,7 +34,7 @@
                     <input type="text" placeholder="Username"
                         class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
                     <span class="absolute inset-y-0 right-3 flex items-center">
-                        <img src="email.svg" alt="Email Icon" class="w-5 h-5 opacity-50">
+                        <img src="email.svg" alt="Email Icon" class="w-6 h-6">
                     </span>
                 </div>
             </div>
@@ -38,11 +43,13 @@
             <div class="mb-4">
                 <label class="block text-gray-700 font-medium mb-1">Password</label>
                 <div class="relative">
-                    <input type="password" placeholder="**********"
+                    <input type="password" id="password" placeholder="**********"
                         class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-                    <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer">
-                        <img src="eye.svg" alt="Show Password Icon" class="w-5 h-5 opacity-50">
-                    </span>
+                        <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" 
+                        onclick="togglePassword()" tabindex="0" onkeydown="handleKey(event)">
+                      <img src="eye.svg" id="eyeIcon" alt="Show Password Icon" class="w-7 h-7">
+                  </span>
+                  
                 </div>
             </div>
 
@@ -56,7 +63,7 @@
             </div>
 
             <!-- Sign In Button -->
-            <button onclick="window.location.href='index.html';" class="w-full bg-blue-700 text-white p-3 rounded-lg hover:bg-blue-800">
+            <button onclick="redirectToDashboard()" type="button" class="w-full bg-blue-700 text-white p-3 rounded-lg hover:bg-blue-800">
                 Sign In
             </button>
         </form>
