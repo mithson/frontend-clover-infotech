@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between bg-white shadow-md p-4">
+        <!-- Left: Talentshift Title & Search Bar -->
+        <div class="flex items-center gap-4 flex-1">
+            <!-- Hamburger Icon & Title -->
+            <div class="flex items-center">
+                <button id="menuToggle" class="text-gray-700 md:hidden focus:outline-none">
+                    ☰
+                </button>
+                <div class="text-xl font-bold text-gray-800 pl-2">Talentshift</div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="md:ml-[180px] relative w-full max-w-xs hidden md:block">
+                <input type="text" placeholder="Search" class="border rounded-lg p-2 pr-10 w-full bg-gray-100">
+                <img class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5" src="search.svg" alt="Search">
+            </div>
+        </div>
+
+        <!-- Right: Welcome User -->
+        <div class="flex items-center gap-3">
+            <span class="text-gray-600 text-sm font-medium">Welcome: User</span>
+            <img src="mdi_user-outline.svg" alt="User Icon" class="w-7 h-7">
+        </div>
+    </header>
+
+
+    <!-- Wrapper -->
+    <div class="flex h-screen">
+
+        <!-- Sidebar (Hidden on Mobile, Visible on Desktop) -->
+        <aside id="sidebar"
+            class="fixed inset-y-0 left-0 bg-white w-64 shadow-lg transform -translate-x-full transition-transform duration-300 md:relative md:translate-x-0">
+
+            <nav class="p-4">
+                <!-- <button id="closeSidebar" class="absolute mb-2 top-2 right-2 p-2 text-gray-600 hover:text-black">
+                    ✖
+                </button> -->
+
+                <ul>
+                    <li style="background-color: #5856D6;"
+                        class="p-3 flex content-center  rounded-lg hover:bg-gray-100">
+                        <img style="margin-top: 3px" src="home.svg" alt="home icon ">
+                        <a href="#" class="pl-2 text-gray-800 text-white font-medium">Dashboard</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+
+
+            <!-- Breadcrumbs -->
+            <nav class="flex content-center text-gray-600 text-sm mb-4 ">
+                <ol class="pt-5 pl-5 flex items-center space-x-2">
+                    <li>
+                        <a href="#" onclick="loadPage('Dashboard')"
+                            class="flex items-center hover:underline text-blue-600">
+                            <img style="margin-top: 3px" src="home_blue.svg" alt="home icon ">
+
+                        </a>
+                    </li>
+                    <li class="slash mx-1 text-gray-400">/</li>
+                    <li id="breadcrumbPage" class="font-medium text-gray-800"></li>
+                </ol>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <main id="mainContent" class="p-6">
+
+
+                <h2 class="text-xl font-semibold mb-4">Welcome to Dashboard</h2>
+
+                <div class="grid md:flex md:justify-start grid-cols-1 md:grid-cols-2 gap-4 max-w-lg">
+
+                    <!-- Upload CV -->
+                    <button onclick="loadPage('upload')"
+                        class="p-4 flex items-center justify-between bg-white shadow-md rounded-lg w-full gap-3">
+
+                        <div class="flex items-center gap-2">
+                            <img src="upload_front.svg" alt="" class="">
+                            <span class="pl-2 text-sm font-medium">Upload CV</span>
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="#000" fill-rule="evenodd"
+                                d="M14.601 4.47a.75.75 0 0 1 0 1.06l-6.364 6.364a.25.25 0 0 0 0 .354l6.364 6.364a.75.75 0 0 1-1.06 1.06L7.177 13.31a1.75 1.75 0 0 1 0-2.475L13.54 4.47a.75.75 0 0 1 1.06 0"
+                                clip-rule="evenodd" transform="rotate(180 12 12)">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <!-- View Search -->
+                    <button onclick="loadPage('search')"
+                        class="p-4 flex items-center justify-between bg-white shadow-md rounded-lg w-full gap-3">
+
+                        <div class="flex items-center gap-2">
+                            <img src="search_front.svg" alt="" class="">
+                            <span class="pl-2 text-sm font-medium">View Search</span>
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="#000" fill-rule="evenodd"
+                                d="M14.601 4.47a.75.75 0 0 1 0 1.06l-6.364 6.364a.25.25 0 0 0 0 .354l6.364 6.364a.75.75 0 0 1-1.06 1.06L7.177 13.31a1.75 1.75 0 0 1 0-2.475L13.54 4.47a.75.75 0 0 1 1.06 0"
+                                clip-rule="evenodd" transform="rotate(180 12 12)">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
