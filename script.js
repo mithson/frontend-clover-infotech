@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             breadcrumbPage.textContent = "View Search";
             break;
         default:
-            pageUrl = "index.html";
+            pageUrl = "dashboard.html";
             breadcrumbPage.textContent = "";
     sidebar.classList.toggle("-translate-x-full");
             
@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
     window.loadPage = loadPage;
 
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//     // window.loadPage = loadPage;
-// }); 
+document.addEventListener("DOMContentLoaded", function () {
+    window.loadPage = loadPage;
+}); 
 const sidebar = document.getElementById("sidebar");
 const menuToggle = document.getElementById("menuToggle");
 
